@@ -32,12 +32,55 @@
 }
 
 /* Custom global styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 body {
-  font-family: 'Inter', 'Roboto', sans-serif;
-  letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.015em;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar for a sleek look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* Glowing Neon Accents in Dark Mode */
+[data-theme='dark'] .navbar {
+  box-shadow: 0 4px 30px rgba(6, 182, 212, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: rgba(6, 182, 212, 0.1);
+  border-left: 3px solid var(--ifm-color-primary);
+  box-shadow: inset 15px 0 20px -20px var(--ifm-color-primary);
+}
+
+/* Premium Code Blocks */
+[data-theme='dark'] .prism-code {
+  background-color: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
