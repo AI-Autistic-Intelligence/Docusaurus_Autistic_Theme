@@ -65,6 +65,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Glowing Neon Accents in Dark Mode */
+.navbar {
+  z-index: 1000;
+}
 [data-theme='dark'] .navbar {
   box-shadow: 0 4px 30px rgba(6, 182, 212, 0.15);
   backdrop-filter: blur(10px);
@@ -83,4 +86,27 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #0f172a !important;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Responsiveness Fixes */
+@media screen and (max-width: 768px) {
+  /* Prevent tables from breaking the layout */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Scale down Mermaid SVGs */
+  div[class^="docusaurus-mermaid-container"] > svg,
+  .mermaid > svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Reduce excessive padding on mobile */
+  .container {
+    padding: 0 1rem;
+  }
 }
